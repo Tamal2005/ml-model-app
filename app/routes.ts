@@ -6,5 +6,5 @@ export default [index("routes/home.tsx"),
     route("spam-mail","components/modelsPage/SpamMailPage.tsx"),
     route("phishing-url","components/modelsPage/PhishingUrlPage.tsx"),
     route("face-mask","components/modelsPage/FaceMaskPage.tsx"),
-    route("deepfake-voice","components/modelsPage/DeepfakeVoicePage.tsx"),
+    route("deepfake-voice","components/modelsPage/DeepFakeVoicePage.tsx"),
 ] satisfies RouteConfig;
