@@ -1,13 +1,18 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import Navbar from "~/components/Navbar";
+import HomePage from "~/components/Home";
 
-export function meta({}: Route.MetaArgs) {
+
+
+export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "AI Model Hub | Intelligent Predictions with ML & Deep Learning" },
+    { name: "description", content: "Experience the power of Machine Learning and Deep Learning through our interactive model app — analyze data, make predictions, and explore AI in action." },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <HomePage />
+  );
 }
