@@ -12,6 +12,7 @@ import "./app.css";
 import Navbar from "./components/Navbar";
 import { SidebarProvider } from "./components/SidebarContext";
 import ContentLayout from "./components/ContentLayout";
+import { useWakeBackends } from "./hooks/useWakeBackends";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -27,6 +28,11 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  useWakeBackends([
+    { name: "mailUrlApi", baseUrl: "https://mail-url-ml-flask-api.onrender.com" },
+    { name: "faceMaskApi", baseUrl: "https://facemask-ml-api.onrender.com" },
+    { name: "deepfakeVoiceApi", baseUrl: "https://deepfakevoice-flask-ml-api.onrender.com" },
+  ]);
   return (
     <html lang="en" className="scroll-smooth">
       <head>
